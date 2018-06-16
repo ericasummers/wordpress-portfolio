@@ -1,1 +1,6 @@
 /wp-config-prod.php
+.DS_Store
+wp-content/.DS_Store
+wp-content/plugins/advanced-custom-fields-pro/.DS_Store
+wp-content/themes/.DS_Store
+wp-content/themes/eriberry/.DS_Store
