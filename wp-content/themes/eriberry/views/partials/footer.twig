@@ -1,0 +1,10 @@
+<footer class="global-footer">
+    <div class="copyright">
+        <p>© {{footer_fields.copyright_year}} {{footer_fields.copyright_text}}</p>
+    </div>
+    <div class="footer-links">
+        {% for footer_link in footer_fields.footer_links.footer_links %}
+            <a href="{{footer_link.link.url}}">{{footer_link.link.title}}</a>
+        {% endfor %}
+    </div>
+</footer>

@@ -29,7 +29,17 @@ $fields = [
 
 	[ 'tab', 'Footer', [ 'placement' => 'left' ] ],
 
-	[ 'text', 'Test' ]
+	[ 'text', 'Copyright Text' ],
+
+	[ 'repeater', 'Footer Links', [
+		'button_label' => 'Add Footer Link',
+		'layout' => 'block',
+		'min' => 1,
+		'max' => 4,
+		'sub_fields' => [
+			[ 'link', 'Link', [ 'return_format' => 'array' ] ]
+		]
+	] ]
 
 ];
 
