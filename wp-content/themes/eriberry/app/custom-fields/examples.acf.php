@@ -2,7 +2,7 @@
 
 $group_args = [
 	'title'          => 'Example Field Group',
-	'location_is'    => [ 'options_page', 'acf-options' ],
+	// 'location_is'    => [ 'options_page', 'acf-options' ],
 	'hide_on_screen' => [ 'the_content' ]
 ];
 
