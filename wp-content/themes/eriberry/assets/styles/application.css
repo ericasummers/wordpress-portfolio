@@ -1,0 +1,53 @@
+.header-global {
+    position: fixed;
+    top: 2rem;
+    background-color: #4980bb;
+    background: linear-gradient(#5f82ab, #4980bb);
+    color: #fff;
+    left: 0;
+    width: 100%;
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar {
+    height: 3rem;
+    position: fixed;
+    top: 8rem;
+    background-color: #94abbd;
+    left: 0;
+    width: 100%;
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: block;
+    padding-top:11rem;
+}
