@@ -7,7 +7,7 @@
     left: 0;
     width: 100%;
     z-index: 5000;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
@@ -17,7 +17,6 @@
     display: flex;
     justify-content: space-between;
     height: 6rem;
-    width: 100%;
     padding: 0 20px;
 }
 
@@ -35,19 +34,23 @@
 
 .nav-bar {
     height: 3rem;
-    position: fixed;
     top: 8rem;
     background-color: #94abbd;
-    left: 0;
-    width: 100%;
-    z-index: 5000;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding: 0 40px;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
+}
+
+.nav-bar a {
+    color: #47494b;
+    text-decoration: none;
 }
 
 main {
     display: block;
-    padding-top:11rem;
+    padding-top: 11rem;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
 }

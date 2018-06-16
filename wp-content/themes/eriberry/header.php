@@ -16,7 +16,7 @@ class Header extends Core_Template {
 	public function nav_menu() {
 
 		$menu_items =  core_get_fields( 'option', '', array(
-			'theme_toggle_text',
+			'menu_links',
 		) );
 
 		// See whether this has a dropdown or not

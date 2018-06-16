@@ -8,6 +8,8 @@
         </div>
     </div>
     <div class="nav-bar">
-        <p>TEST CONTENT</p>
+        {% for menu_link in nav_menu.menu_links %}
+            <a href="{{menu_link.link.url}}" class="nav-link">{{menu_link.link.title}}</a>
+        {% endfor %}
     </div>
 </header>
