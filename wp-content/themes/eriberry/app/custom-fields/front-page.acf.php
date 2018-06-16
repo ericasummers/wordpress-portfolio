@@ -2,8 +2,7 @@
 
 $group_args = [
 	'title'          => 'Home Options',
-	'location_is'    => [ 'page_type', 'front_page' ],
-	'hide_on_screen' => [ 'the_content' ]
+	'location_is'    => [ 'page_type', 'front_page' ]
 ];
 
 $fields = [

@@ -1,6 +1,8 @@
 {% extends "base.twig" %}
 {% block content %}
-
-	{{fields.hello}}
+	<main class="main">
+		{{fields.post_content}}
+		{{fields.custom_fields.hello}}
+	</main>
 
 {% endblock %}

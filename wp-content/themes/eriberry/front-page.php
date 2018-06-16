@@ -3,9 +3,12 @@ class Front_Page extends Core_Template {
 
 	public function fields() {
 
-		return core_get_fields( $this->obj_id, '', array(
+		$post = get_post($this->obj_id);
+		$post->custom_fields = core_get_fields( $this->obj_id, '', array(
 			'hello'
 		) );
+
+		return $post;
 
 	}
 
