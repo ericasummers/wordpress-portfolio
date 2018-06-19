@@ -1,8 +1,15 @@
 {% extends "base.twig" %}
 {% block content %}
 	<main class="main">
-		{{fields.post_content}}
-		{{fields.custom_fields.hello}}
+		<div class="mini-window">
+			<div class="toolbar">
+				<i class="fas fa-times"></i>
+			</div>
+			<div class="content">
+				{{fields.post_content}}
+				{{fields.custom_fields.hello}}
+			</div>
+		</div>
 	</main>
 
 {% endblock %}
