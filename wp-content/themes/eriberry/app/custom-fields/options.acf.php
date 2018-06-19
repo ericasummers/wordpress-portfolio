@@ -13,9 +13,6 @@ $fields = [
 	[ 'image', 'Header Logo', [
 		'return_format' => 'url'
 	] ],
-	[ 'text', 'Theme Toggle Text' ],
-
-	[ 'tab', 'Top Menu', [ 'placement' => 'left' ] ],
 
 	[ 'repeater', 'Menu Links', [
 		'button_label' => 'Add Link',

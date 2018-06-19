@@ -1,15 +1,15 @@
 <header class="header-global">
-    <div class="top-banner">
-        <div class="logo">
-            {{fields.header_text}}
-        </div>
-        <div class="experience">
-            {{fields.theme_toggle_text}}
-        </div>
-    </div>
     <div class="nav-bar">
         {% for menu_link in nav_menu.menu_links %}
             <a href="{{menu_link.link.url}}" class="nav-link">{{menu_link.link.title}}</a>
         {% endfor %}
+    </div>
+    <div class="top-banner">
+        <div class="logo">
+            {{fields.header_text}}
+        </div>
+    </div>
+    <div class="right-nav">
+        <p>Login</p>
     </div>
 </header>
