@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+{% block content %}
+	<main class="main">
+		<div class="minimized">
+			<i class="far fa-window-minimize"></i>
+		</div>
+		<div class="mini-window">
+			<div class="toolbar">
+				<i class="fas fa-times"></i>
+			</div>
+			<div class="content">
+				{{function('apply_filters', 'the_content', fields.post_content)}}
+			</div>
+		</div>
+		<div class="mini-window-bg">
+		</div>
+	</main>
+
+{% endblock %}

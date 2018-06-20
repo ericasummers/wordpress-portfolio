@@ -81,6 +81,7 @@ main {
 
 .mini-window {
     max-width: 900px;
+    width: 900px;
     background-color: #c3d3ee;
     margin-top: 3rem;
     left: 3rem;
@@ -91,6 +92,7 @@ main {
 
 .mini-window-bg {
     max-width: 900px;
+    width: 900px;
     left: 3rem;
     background: url(../images/hidden-bubbles.png);
     margin-top: 3rem;
