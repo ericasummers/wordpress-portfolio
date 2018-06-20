@@ -1,6 +1,8 @@
 body {
     background-color: #8698d0;
     background: linear-gradient(to right, #aab1e6, #4f6faf);
+    display: block;
+    position: relative;
 }
 
 .header-global {
@@ -55,7 +57,7 @@ body {
 
 main {
     display: block;
-    padding-top: 8rem;
+    margin-top: 4rem;
     min-height: 100vh;
     max-width: 100vw;
     overflow: hidden;
@@ -64,15 +66,34 @@ main {
     background-position-x: right;
     background-position-y: 150px;
     background-size: auto;
+    left: 0;
+}
+
+.minimized {
+    display: block;
+    background-color: #fff;
+    float: right;
+    height: 2.8rem;
+    width: 200px;
+    margin-right: 180px;
+    display: none;
 }
 
 .mini-window {
     max-width: 900px;
     background-color: #c3d3ee;
-    position: relative;
+    margin-top: 3rem;
     left: 3rem;
-    /* artbg */
+    min-height: 80vh;
+    z-index: 100;
+    position: absolute;
+}
+
+.mini-window-bg {
+    max-width: 900px;
+    left: 3rem;
     background: url(../images/hidden-bubbles.png);
+    margin-top: 3rem;
     min-height: 80vh;
     background-size: contain;
     background-repeat: no-repeat;
@@ -83,6 +104,13 @@ main {
     width: 100%;
     background-color: #fff;
     height: 3rem;
+}
+
+.fa-window-minimize {
+    font-size: 2rem;
+    color: #617cba;
+    float: right;
+    padding: 10px;
 }
 
 .fa-times {
@@ -97,7 +125,11 @@ main {
 }
 
 .global-footer {
-    background-color: #6eb9b5;
+    background-color: #363f49;
     padding: 3rem 0 4rem;
     text-align: center;
+    width: 100%;
+    float: left;
+    position: relative;
+    display: block;
 }
