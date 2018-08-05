@@ -9,11 +9,30 @@
 				<i class="fas fa-times"></i>
 			</div>
 			<div class="content">
-				{{function('apply_filters', 'the_content', fields.post_content)}}
+				{{function('apply_filters', 'the_content', fields.post.post_content)}}
 			</div>
 		</div>
 		<div class="mini-window-bg">
 		</div>
 	</main>
+	{% if fields.optional_full_width_content %}
+		<div class="full-width-content">
+			{{function('apply_filters', 'the_content', fields.optional_full_width_content)}}
+		</div>
+	{% endif %}
+	{% if fields.text_content %}
+		<div class="content-and-image">
+			<div class="content-left">
+				<p>{{fields.text_content}}</p>
+			</div>
+			<div class="image-right">
+				<img src="{{fields.optional_image.url}}" alt="{{fields.optional_image.alt}}" />
+			</div>
+		</div>
+	{% endif %}
+	{% if fields.cta_link %}
+		<div class="call-to-action">
+		</div>
+	{% endif %}
 
 {% endblock %}

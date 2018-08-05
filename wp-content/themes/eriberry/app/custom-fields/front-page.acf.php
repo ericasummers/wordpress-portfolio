@@ -7,7 +7,7 @@ $group_args = [
 
 $fields = [
 	[ 'tab', 'Full Width Content', ['placement' => 'left'] ],
-	[ 'textarea', 'Optional Full Width Content' ],
+	[ 'wysiwyg', 'Optional Full Width Content' ],
 
 	[ 'tab', 'Content & Image', ['placement' => 'left'] ],
 	[ 'textarea', 'Text Content' ],
