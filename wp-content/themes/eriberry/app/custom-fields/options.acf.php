@@ -24,6 +24,8 @@ $fields = [
 		]
 	] ],
 
+	[ 'link', 'Portfolio Link', ['return_format' => 'array'] ],
+
 	[ 'tab', 'Footer', [ 'placement' => 'left' ] ],
 
 	[ 'text', 'Copyright Text' ],

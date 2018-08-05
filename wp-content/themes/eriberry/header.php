@@ -19,17 +19,14 @@ class Header extends Core_Template {
 			'menu_links',
 		) );
 
-		// See whether this has a dropdown or not
-		// foreach( $menu_items['menu_items'] as $key => $menu_item ) {
-		// 	if ($menu_item['submenu_items']) {
-		// 		$menu_items['menu_items'][$key]['has_dropdown'] = true;
-		// 	}
-		// }
-
 		// $menu_items['logo'] = get_template_directory_uri() . '/assets/resources/logo.png';
 
 		return $menu_items;
 
+	}
+
+	public function portfolio() {
+		return get_field('portfolio_link', 'option');
 	}
 
 
