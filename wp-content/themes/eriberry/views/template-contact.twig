@@ -1,0 +1,23 @@
+{% extends "base.twig" %}
+{% block content %}
+	<main class="main">
+		<div class="minimized">
+			<i class="far fa-window-minimize"></i>
+		</div>
+		<div class="mini-window">
+			<div class="toolbar">
+				<i class="fas fa-times"></i>
+			</div>
+			<div class="content">
+				<h1>{{fields.heading}}</h1>
+                <h3>{{fields.greeting_subheading}}</h3>
+                <div class="form">
+                    {{function('do_shortcode', fields.form_shortcode)}}
+                </div>
+			</div>
+		</div>
+		<div class="mini-window-bg">
+		</div>
+	</main>
+
+{% endblock %}
