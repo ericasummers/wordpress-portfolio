@@ -88,7 +88,9 @@ main {
     height: 2.8rem;
     width: 200px;
     margin-right: 180px;
-    display: none;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
 .mini-window {
@@ -101,6 +103,8 @@ main {
     z-index: 100;
     position: absolute;
     font-family: 'Lato', sans-serif;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
 .mini-window-bg {
@@ -145,6 +149,11 @@ main {
     font-weight: bold;
     color: #657da7;
     background-color: #efebd9;
+
+    &:hover {
+        position: relative;
+        top: -2px;
+    }
 }
 
 .full-width-content {
