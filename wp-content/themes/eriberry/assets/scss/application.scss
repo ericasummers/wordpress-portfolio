@@ -27,6 +27,11 @@ a {
     align-items: center;
     font-family: 'Catamaran', sans-serif;
     font-size: 1.2rem;
+    @media only screen and (max-width:700px) {
+        width: auto;
+        justify-content: space-between;
+        margin-right: 1rem;
+    }
 }
 
 .top-banner {
@@ -36,12 +41,26 @@ a {
     padding: 0 20px;
     float: right;
     font-size: 2rem;
+    @media only screen and (max-width:700px) {
+
+    }
 }
 
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.mobile_menu_toggle {
+    display: none;
+    img {
+        width: 50px;
+        margin-left: 30px;
+    }
+    @media only screen and (max-width:700px) {
+        display: inline;
+    }
 }
 
 .nav-bar {
@@ -52,17 +71,13 @@ a {
     padding: 0 20px;
     align-items: center;
 
-    @media only screen and (max-width:800px) {
-        display: block;
+    @media only screen and (max-width:700px) {
+        display: none;
     }
 
     a {
         color: #47494b;
         text-decoration: none;
-
-        @media only screen and (max-width:800px) {
-            display: block;
-        }
     }
 }
 
@@ -73,6 +88,15 @@ a {
     justify-content: space-evenly;
     padding: 0 20px;
     align-items: center;
+    @media only screen and (max-width:700px) {
+        display: none;
+    }
+}
+
+#wpadminbar {
+    @media only screen and (max-width: 600px) {
+        position: fixed;
+    }
 }
 
 main {

@@ -13,13 +13,18 @@ class Header extends Core_Template {
 		) );
 	}
 
+	public function mobile() {
+
+		$mobile['menu_icon'] = get_template_directory_uri() . '/assets/images/hamburger-icon.gif';
+
+		return $mobile;
+	}
+
 	public function nav_menu() {
 
 		$menu_items =  core_get_fields( 'option', '', array(
 			'menu_links',
 		) );
-
-		// $menu_items['logo'] = get_template_directory_uri() . '/assets/resources/logo.png';
 
 		return $menu_items;
 

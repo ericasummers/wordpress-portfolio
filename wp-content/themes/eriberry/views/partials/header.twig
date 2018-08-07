@@ -1,4 +1,7 @@
 <header class="header-global">
+    <a href="#" class="mobile_menu_toggle">
+        <img src="{{mobile.menu_icon}}">
+    </a>
     <div class="nav-bar">
         {% for menu_link in nav_menu.menu_links %}
             <a href="{{menu_link.link.url}}" class="nav-link">{{menu_link.link.title}}</a>
