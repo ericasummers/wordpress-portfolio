@@ -140,6 +140,9 @@ main {
     background-position-y: 150px;
     background-size: 150px;
     left: 0;
+    @media only screen and (max-width:600px) {
+        background: none;
+    }
 }
 
 .minimized {
