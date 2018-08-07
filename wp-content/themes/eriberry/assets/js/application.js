@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    $('.toolbar svg').click(function(e) {
-        e.preventDefault();
+    $('.toolbar').click(function() {
+        $('.mini-window').removeClass('slideInLeft');
+        $('.mini-window').addClass('slideInDown');
         $('.mini-window').css('display', 'none');
         $('.minimized').css('display', 'block');
     });
-    $('.fa-window-minimize').on('click', function(e) {
-        e.preventDefault();
+    $('.minimized').on('click', function() {
         $('.mini-window').css('display', 'block');
         $('.minimized').css('display', 'none');
     });
