@@ -52,9 +52,17 @@ a {
     padding: 0 20px;
     align-items: center;
 
+    @media only screen and (max-width:800px) {
+        display: block;
+    }
+
     a {
         color: #47494b;
         text-decoration: none;
+
+        @media only screen and (max-width:800px) {
+            display: block;
+        }
     }
 }
 
