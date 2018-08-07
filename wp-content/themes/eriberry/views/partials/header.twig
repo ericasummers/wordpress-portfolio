@@ -16,3 +16,16 @@
         <a class="portfolio-link" href="{{portfolio.url}}">{{portfolio.title}}</a>
     </div>
 </header>
+<div class="mobile_menu hidden">
+    <div class="mobile-link">
+        <a href="/">Home</a>
+    </div>
+    {% for menu_link in nav_menu.menu_links %}
+        <div class="mobile-link">
+            <a href="{{menu_link.link.url}}">{{menu_link.link.title}}</a>
+        </div>
+    {% endfor %}
+    <div class="mobile-link portfolio-link">
+        <a href="{{portfolio.url}}">{{portfolio.title}}</a>
+    </div>
+</div>

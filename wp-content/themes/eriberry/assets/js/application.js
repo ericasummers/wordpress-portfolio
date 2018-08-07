@@ -9,5 +9,9 @@ $(document).ready(function() {
         $('.minimized').css('visibility', 'hidden');
     });
 
+    $('.mobile_menu_toggle').on('click', function(e) {
+        e.preventDefault();
+        $('.mobile_menu').toggleClass('hidden');
+    });
 
 });
