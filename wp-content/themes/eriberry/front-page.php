@@ -12,6 +12,7 @@ class Front_Page extends Core_Template {
 			'cta_link'
 		));
 		$fields['post'] = get_post($this->obj_id);
+		$fields['bg_image'] = get_template_directory_uri() . '/assets/images/Bubbles-animation.gif';
 		return $fields;
 
 	}

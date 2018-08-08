@@ -188,14 +188,16 @@ main {
 
 .mini-window-bg {
     max-width: 900px;
-    width: 900px;
-    left: 3rem;
-    background: url(../images/hidden-bubbles.png);
+    left: 5%;
+    background: url(../images/Bubbles-animation.gif);
     margin-top: 3rem;
     min-height: 80vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
+    @media only screen and (max-width:600px) {
+        background-size: cover;
+    }
 }
 
 .toolbar {
