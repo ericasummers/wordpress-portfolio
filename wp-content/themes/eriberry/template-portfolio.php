@@ -18,8 +18,8 @@ class Template_Portfolio extends Core_Template {
 		));
 		$fields['post'] = get_post($this->obj_id);
 
-		$fields['arrow_left'] = get_template_directory_uri() . '/assets/images/scroll-arrow-left.png';
-		$fields['arrow_right'] = get_template_directory_uri() . '/assets/images/scroll-arrow-right.png';
+		$fields['arrow_left'] = get_template_directory_uri() . '/assets/images/round-arrow-left.png';
+		$fields['arrow_right'] = get_template_directory_uri() . '/assets/images/round-arrow-right.png';
 		return $fields;
 
 	}

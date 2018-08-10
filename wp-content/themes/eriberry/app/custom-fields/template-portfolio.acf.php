@@ -17,7 +17,7 @@ $fields = [
         'max' => 20,
         'sub_fields' => [
             [ 'text', 'Title' ],
-            [ 'textarea', 'Description' ],
+            [ 'wysiwyg', 'Description' ],
             [ 'link', 'Live URL', ['return_format' => 'array'] ],
             [ 'link', 'Code Link', ['instructions' => 'Link to code excerpts on Github, Gitlab, etc', 'return_format' => 'array'] ],
             [ 'image', 'Featured Image', ['return_format' => 'array'] ],

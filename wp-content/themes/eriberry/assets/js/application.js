@@ -14,4 +14,22 @@ $(document).ready(function() {
         $('.mobile_menu').toggleClass('hidden');
     });
 
+    if ($('.portfolio_example_slider').length) {
+        $('.portfolio_example_slider').slick({
+            arrows: false,
+            focusOnSelect: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            slidesPerRow: 1,
+            infinite: true
+        });
+
+        $('.slick-left-arrow').click(function() {
+            $('.portfolio_example_slider').slick('slickPrev');
+        });
+        $('.slick-right-arrow').click(function() {
+            $('.portfolio_example_slider').slick('slickNext');
+        });
+    }
+
 });

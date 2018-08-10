@@ -8,7 +8,7 @@
                 <div class="portfolio_example">
                     <img src="{{example.featured_image.url}}" alt="{{example.featured_image.alt}}" />
                     <div class="portfolio_example_content">
-                        <h3>{{example.title}}</h3>
+                        <h3 class="portfolio-example-heading">{{example.title}}</h3>
                         {% if example.live_url %}
                             <h4>Live Link: <a href="{{example.live_url.url}}">{{example.live_url.title}}</a></h4>
                         {% endif %}
@@ -17,16 +17,29 @@
                         {% endif %}
                         <p>{{example.description}}</p>
                         {% if example.other_images %}
-                            <div class="slick-left-arrow">
-                                <img src="{{fields.arrow_left}}" class="slick-arrows" alt="Slider left arrow" />
-                            </div>
-                            <div class="portfolio_example_slider">
-                                {% for image in example.other_images %}
-                                    <img src="{{image.example_image.url}}" alt="{{image.example_image.alt}}" />
-                                {% endfor %}
-                            </div>
-                            <div class="slick-right-arrow">
-                                <img src="{{fields.arrow_right}}" class="slick-arrows" alt="Slider right arrow" />
+                            <div class="slider-container">
+                                <h4>Screenshot demos:</h4>
+                                <div class="portfolio-slider">
+                                    <div class="slick-left-arrow">
+                                        <img src="{{fields.arrow_left}}" class="slick-arrows" alt="Slider left arrow" />
+                                    </div>
+                                    <div class="portfolio_example_slider">
+                                        {% for image in example.other_images %}
+                                            <img src="{{image.example_image.url}}" alt="{{image.example_image.alt}}" />
+                                        {% endfor %}
+                                    </div>
+                                    <div class="mobile-arrows" style="display: none;">
+                                        <div class="slick-left-arrow">
+                                            <img src="{{fields.arrow_left}}" class="slick-arrows" alt="Slider left arrow" />
+                                        </div>
+                                        <div class="slick-right-arrow">
+                                        <img src="{{fields.arrow_right}}" class="slick-arrows" alt="Slider right arrow" />
+                                    </div>
+                                    </div>
+                                    <div class="slick-right-arrow">
+                                        <img src="{{fields.arrow_right}}" class="slick-arrows" alt="Slider right arrow" />
+                                    </div>
+                                </div>
                             </div>
                         {% endif %}
                     </div>

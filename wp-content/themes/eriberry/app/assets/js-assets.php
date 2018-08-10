@@ -8,3 +8,5 @@ load_js( '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(
 ) );
 
 load_js( $default_url . '/application.js' );
+
+load_js( $default_url . '/slick.min.js' );
