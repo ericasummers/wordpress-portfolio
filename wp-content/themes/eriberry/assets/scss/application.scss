@@ -373,6 +373,17 @@ main {
     color:red !important;
 }
 
+.wp-image-58 {
+    display: block;
+    margin-left: 40%;
+    @media only screen and (max-width:600px)  {
+        margin-left: 35%;
+    }
+    @media only screen and (max-width:450px)  {
+        margin-left: 30%;
+    }
+}
+
 .global-footer {
     background-color: #363f49;
     padding: 3rem 0 4rem;
