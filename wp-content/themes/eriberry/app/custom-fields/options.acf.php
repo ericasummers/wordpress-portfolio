@@ -26,9 +26,25 @@ $fields = [
 
 	[ 'link', 'Portfolio Link', ['return_format' => 'array'] ],
 
+	[ 'tab', 'Blog Options', [ 'placement' => 'left' ] ],
+
+	[ 'image', 'Background Image', [
+		'return_format' => 'url'
+	] ],
+
 	[ 'tab', 'Footer', [ 'placement' => 'left' ] ],
 
 	[ 'text', 'Copyright Text' ],
+
+	[ 'repeater', 'Social Media', [
+		'button_label' => 'Add Social Media',
+		'layout' => 'block',
+		'min' => 0,
+		'max' => 6,
+		'sub_fields' => [
+			[ 'link', 'Social Media Link', [ 'return_format' => 'array' ] ]
+		]
+	] ],
 
 	[ 'repeater', 'Footer Links', [
 		'button_label' => 'Add Footer Link',
