@@ -9,11 +9,20 @@
 				<i class="fas fa-times"></i>
 			</div>
 			<div class="content">
-				{{function('apply_filters', 'the_content', fields.post_content)}}
+				{{function('apply_filters', 'the_content', fields.post.post_content)}}
 			</div>
 		</div>
 		<div class="mini-window-bg">
 		</div>
 	</main>
+	{% if fields.cta_link %}
+		<div class="call-to-action">
+			<h3>{{fields.cta_title}}</h3>
+			<p>{{fields.optional_cta_description}}</p>
+			<div class="cta-click">
+				<a href="{{fields.cta_link.url}}" class="cta-link">{{fields.cta_link.title}}</a>
+			</div>
+		</div>
+	{% endif %}
 
 {% endblock %}

@@ -32,6 +32,9 @@
 	{% endif %}
 	{% if fields.cta_link %}
 		<div class="call-to-action">
+			<h3>{{fields.cta_title}}</h3>
+			<p>{{fields.optional_cta_description}}</p>
+			<a href="{{fields.cta_link.url}}" class="cta-link">{{fields.cta_link.title}}</a>
 		</div>
 	{% endif %}
 

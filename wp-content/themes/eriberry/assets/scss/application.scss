@@ -253,6 +253,26 @@ main {
     justify-content: space-evenly;
 }
 
+.call-to-action {
+    padding: 2rem;
+    background-color: #354e82;
+    color: wheat;
+    text-align: center;
+    .cta-click {
+        margin: 30px;
+    }
+    a {
+        padding: 10px 15px;
+        background-color: #59b1b1;
+        box-shadow: 0 0 6px gray;
+        border-radius: 18px;
+        &:hover {
+            background-color: #9ce6e6;
+            box-shadow: 0 0 6px wheat;
+        }
+    }
+}
+
 .portfolio {
     margin: 0;
     h1 {
