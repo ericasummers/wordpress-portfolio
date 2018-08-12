@@ -1,0 +1,31 @@
+<div class="pagination">
+    {% set start = min( current, num_pages - (max_count - 2) ) > 0 ? min( current, num_pages - (max_count - 2) ) : 1 %}
+    {% set counter = 1 %}
+    {% for page in range(start,num_pages) %}
+        {% if (counter < max_count) %}
+            {% if (start > 1 and counter == 1) %}
+                {% if ( page - 1 ) == 1 %}
+                    <a href="{{ function('paging_filter', 'current', page - 1) }}" class="page-numbers">{{ page - 1 }}</a>
+                {% else %}
+                    <a href="{{ function('paging_filter', 'current', page - 1) }}" class="page-numbers">…</a>
+                {% endif %}
+                {% set counter = counter + 1 %}
+            {% endif %}
+            {% if page == current %}
+                <span class="page-numbers current">{{ page }}</span>
+            {% else %}
+                <a href="{{ function('paging_filter', 'current', page) }}" class="page-numbers">{{ page }}</a>
+            {% endif %}
+
+        {% elseif (counter == max_count and page == num_pages) %}
+            {% if page == current %}
+                <span class="page-numbers current">{{ page }}</span>
+            {% else %}
+                <a href="{{ function('paging_filter', 'current', page) }}" class="page-numbers">{{ page }}</a>
+            {% endif %}
+        {% elseif (counter == max_count) %}
+            <a href="{{ function('paging_filter', 'current', page) }}" class="page-numbers">…</a>
+        {% endif %}
+        {% set counter = counter + 1 %}
+    {% endfor %}
+</div>

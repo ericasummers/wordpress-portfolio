@@ -1,0 +1,87 @@
+{% extends "base.twig" %}
+{% block content %}
+	<main class="blog">
+		<div class="intro">
+            <section class="intro__content">
+                <h1 class="hie">{{fields.heading}}</h1>
+                <p class="hie">{{fields.description}}</p>
+            </section>
+        </div>
+        <div class="blog_posts_content">
+            <div class="filters_dropdowns">
+                <a href="#" class="title">
+                    {% if fields.current_category and fields.current_category != 'All' %}
+                        {{fields.current_category}}
+                    {% else %}
+                        Category
+                    {% endif %}
+                </a>
+                <ul class="dropdown" id="category_dropdown">
+                    {% if fields.current_category and fields.current_category != 'All' %}
+                        <li><a href="{{function('filter_uri', 'All')}}">All</a></li>
+                    {% endif %}
+                    {% for category in fields.categories %}
+                        {% if category.name != fields.current_category %}
+                            <li><a href="{{function('filter_uri', category.name)}}">{{category.name}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <form class="search" action="#" method="get">
+                <label for="query" class="hidden">Search</label>
+                <input id="query" class="search__input" type="text" name="query" placeholder="Search" value="{{fields.current_search_term}}">
+                {% if fields.current_category %}
+                    <input type="hidden" name="category" value="{{fields.current_category}}">
+                {% endif %}
+                <input class="search__submit" type="submit" value="Search">
+            </form>
+
+            <div class="articles_list">
+                {% if blog_posts.posts %}
+                    {% for post in blog_posts.posts %}
+                        <div class="articles_item">
+                            <figure class="articles_image">
+                                <a href="{{post.permalink}}"><img src="{{post.image.url}}" alt="{{post.image.alt}}"></a>
+                            </figure>
+                            <div class="articles_details">
+                                <div class="articles_meta">
+                                    <p>{{post.formatted_post_date}}</p>
+                                    <p>
+                                        {% for category in post.categories %}
+                                            {% if loop.last %}
+                                                {{category.name}}
+                                            {% else %}
+                                                {{category.name}},
+                                            {% endif %}
+                                        {% endfor %}
+                                    </p>
+                                </div> <!-- / __meta -->
+                                <h2 class="articles__title"><a href="{{post.permalink}}">{{post.post_title}}</a></h2>
+                                <p class="articles__excerpt">{{post.excerpt}}</p>
+                            </div> <!-- / __details -->
+                        </div> <!-- / __item -->
+                    {% endfor %}
+                {% else %}
+                    <div class="articles_item">
+                        <div class="articles_details">
+                            <h2 class="articles__title"><a>No results found</a></h2>
+                            <p class="articles__excerpt">Sorry, there are no results with these filters. Please try another search!</p>
+                        </div> <!-- / __details -->
+                    </div> <!-- / __item -->
+                {% endif %}
+            </div> <!-- / __list -->
+
+            {% if blog_posts.posts %}
+                {% if (blog_posts.wp_query.have_posts and blog_posts.wp_query.max_num_pages > 1) %}
+                    {% set pagination = {
+                    current: params.current ? params.current : 1,
+                    num_pages: blog_posts.wp_query.max_num_pages,
+                    max_count: 10
+                    } %}
+                    {% include "partials/pagination.twig" with pagination only %}
+                {% endif %}
+            {% endif %}
+        </div>
+	</main>
+
+{% endblock %}
