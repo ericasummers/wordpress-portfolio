@@ -32,4 +32,14 @@ $(document).ready(function() {
         });
     }
 
+    $('.title').click(function() {
+        $('#category_dropdown').show();
+    });
+    $('#category_dropdown a').click(function(e) {
+        $('.title').text($(this).text());
+        $('.category_dropdown').hide();
+        $(this).addClass('current');
+        e.preventDefault();
+    });
+
 });

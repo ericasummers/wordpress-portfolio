@@ -6,15 +6,17 @@ $group_args = [
 ];
 
 $fields = [
-	[ 'tab', 'Full Width Content', ['placement' => 'left'] ],
-	[ 'wysiwyg', 'Optional Full Width Content' ],
+	[ 'image', 'Background Image', ['return_format' => 'url'] ],
 
-	[ 'tab', 'Content & Image', ['placement' => 'left'] ],
-	[ 'textarea', 'Text Content' ],
-	[ 'image', 'Optional Image', ['return_format' => 'array'] ],
+	// [ 'tab', 'Full Width Content', ['placement' => 'left'] ],
+	// [ 'wysiwyg', 'Optional Full Width Content' ],
 
-	[ 'tab', 'Call to Action', ['placement' => 'left'] ],
-	[ 'text', 'CTA Title' ],
+	// [ 'tab', 'Content & Image', ['placement' => 'left'] ],
+	// [ 'textarea', 'Text Content' ],
+	// [ 'image', 'Optional Image', ['return_format' => 'array'] ],
+
+	// [ 'tab', 'Call to Action', ['placement' => 'left'] ],
+	[ 'text', 'Optional CTA Title' ],
 	[ 'text', 'Optional CTA Description' ],
 	[ 'link', 'CTA Link', ['return_format' => 'array'] ]
 ];

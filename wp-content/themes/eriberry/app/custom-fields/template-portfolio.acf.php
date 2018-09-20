@@ -17,19 +17,10 @@ $fields = [
         'max' => 20,
         'sub_fields' => [
             [ 'text', 'Title' ],
+            [ 'image', 'Featured Image', ['return_format' => 'array'] ],
             [ 'wysiwyg', 'Description' ],
             [ 'link', 'Live URL', ['return_format' => 'array'] ],
-            [ 'link', 'Code Link', ['instructions' => 'Link to code excerpts on Github, Gitlab, etc', 'return_format' => 'array'] ],
-            [ 'image', 'Featured Image', ['return_format' => 'array'] ],
-            [ 'repeater', 'Other Images', [
-                'layout' => 'block',
-                'button_label' => 'Add Image',
-                'min' => 0,
-                'max' => 10,
-                'sub_fields' => [
-                    [ 'image', 'Example Image', ['return_format' => 'array'] ]
-                ]
-            ] ]
+            [ 'link', 'Code Link', ['instructions' => 'Link to code excerpts on Github, Gitlab, etc', 'return_format' => 'array'] ]
         ]
     ] ]
 

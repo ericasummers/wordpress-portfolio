@@ -4,10 +4,8 @@ class Front_Page extends Core_Template {
 	public function fields() {
 
 		$fields = core_get_fields($this->obj_id, '', array(
-			'optional_full_width_content',
-			'text_content',
-			'optional_image',
-			'cta_title',
+			'background_image',
+			'optional_cta_title',
 			'optional_cta_description',
 			'cta_link'
 		));
